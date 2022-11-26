@@ -16,6 +16,7 @@ module.exports = function (eleventyConfig) {
 
   // Folders to copy to output folder
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("media");
 };
 
 function extractExcerpt(article) {

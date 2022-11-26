@@ -5,4 +5,18 @@ layout: base-layout.njk
   <h1>{{ title }}</h1>
   <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
   {{ content | safe }}
+
+  
+
+  <section>
+    <audio controls id="player">
+        <source src="/media/{{file}}.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+  
+  <section>
+    <a href="/media/{{file}}.mp3" download target="_blank">Download</a>
+  </section>
+
+  
 </article>

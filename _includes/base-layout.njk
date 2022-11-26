@@ -7,10 +7,25 @@
 
   <link rel="stylesheet" href="/css/site.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto&display=fallback" rel="stylesheet">
+  <script type="text/javascript">
+    
+    window.addEventListener("click", (event) => {
+      if (event && event.target && event.target.tagName === "STAMP") {
+        setTime(event.target.innerHTML);
+      }
+    });
+
+    function setTime(time) {
+      const player = document.getElementById("player");
+      const [hours, mins, secs ] = time.split(":");
+      player.currentTime = parseInt(hours) * 3600 + parseInt(mins) * 60 + parseInt(secs);
+
+    }
+  </script>
 </head>
-<body>
+<body id="body">
 <header>
-  <a href="/" class="link--home">My Blog</a>
+  <a href="/" class="link--home">Mixes</a>
   <a href="/About" class="link--about">About</a>
 </header>
 <main>
